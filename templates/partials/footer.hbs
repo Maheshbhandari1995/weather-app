@@ -1,0 +1,90 @@
+  <footer>
+    <p>Create By The Pintoo Chauhan</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+<script>
+
+const day = document.getElementById("day");
+const today_data = document.getElementById("today_data");
+{{!-- log("day :",day); --}}
+
+  const getCurrentDay = () =>{
+    let weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednessday";
+    weekday[4] = "Thusday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
+    let months = new Array(12);
+    months[0] = "JAN";
+    months[1] = "FEB";
+    months[2] = "MAR";
+    months[3] = "APR";
+    months[4] = "MAY";
+    months[5] = "JUN";
+    months[6] = "JUL";
+    months[7] = "AGU";
+    months[8] = "SEPT";
+    months[9] = "OCT";
+    months[10] = "NOV";
+    months[11] = "DEC";
+
+    let currentTime = new Date();
+    let getDay = currentTime.getDay();
+
+    let day1 = weekday[getDay];
+
+    
+    log("day : ",day1);
+
+    day.innerText = day1;
+
+  }
+  getCurrentDay();
+
+  const getCurrentTime = () =>{
+
+    let months = new Array(12);
+    months[0] = "JAN";
+    months[1] = "FEB";
+    months[2] = "MAR";
+    months[3] = "APR";
+    months[4] = "MAY";
+    months[5] = "JUN";
+    months[6] = "JUL";
+    months[7] = "AGU";
+    months[8] = "SEPT";
+    months[9] = "OCT";
+    months[10] = "NOV";
+    months[11] = "DEC";
+
+    let currentTime = new Date();
+
+    let getDate = currentTime.getDate();
+    let getMonth = currentTime.getMonth();
+    let getYear = currentTime.getFullYear();
+
+    let month = months[getMonth];
+    
+    log("getDate : ",getDate);
+    log("month : ",month);
+    log("getYear : ",getYear);
+    today_data.innerText = `${getDate}`+' '+`${month}`+' '+`${getYear}`;
+
+
+  }
+
+  getCurrentTime();
+
+  
+</script>
+
+</body>
+</html>
